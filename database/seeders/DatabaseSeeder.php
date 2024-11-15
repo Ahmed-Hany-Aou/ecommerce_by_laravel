@@ -15,12 +15,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-<<<<<<< Updated upstream
+
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
-=======
+
      //   User::factory()->create([
        //     'name' => 'Test User',
          //   'email' => 'test@example.com',
@@ -30,6 +30,6 @@ class DatabaseSeeder extends Seeder
                 \App\Models\User::factory(2)->create();
 
 
->>>>>>> Stashed changes
+
     }
 }
