@@ -12,7 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+<<<<<<< Updated upstream
         //
+=======
+        $middleware->alias([
+            'admin' => AdminRedirectIfAuthenticated::class,
+         //  'seller' => SellerRedirectIfAuthenticated::class,
+        ]);
+>>>>>>> Stashed changes
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
