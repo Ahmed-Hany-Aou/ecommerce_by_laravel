@@ -108,7 +108,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return app( LogoutResponse::class);
+        return app(LogoutResponse::class);
     }
 }
 

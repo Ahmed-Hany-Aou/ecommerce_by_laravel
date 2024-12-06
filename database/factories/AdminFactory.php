@@ -10,6 +10,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 //use Laravel\Jetstream\Features;
 
+use App\Models\Team;
+use App\Models\User;
+
+
+
+use Laravel\Jetstream\Features;
+
+
+
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Admin>
  */
@@ -30,7 +40,8 @@ class AdminFactory extends Factory
           'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => Hash::make('password'),
+           // 'password' => static::$password ??= Hash::make('password'),
+          'password' => Hash::make('password'),
            /// 'two_factor_secret' => null,
             //'two_factor_recovery_codes' => null,
             'remember_token' => Str::random(10),
